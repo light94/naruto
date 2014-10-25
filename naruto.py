@@ -4,7 +4,7 @@ from datetime import date
 import sys
 
 
-if date.isoweekday(date.today())) ! = 4: #check for updates only on thursday
+if date.isoweekday(date.today()) != 4: #check for updates only on thursday
 	sys.exit()
 
 
