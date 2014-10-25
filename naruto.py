@@ -4,8 +4,8 @@ from datetime import date
 import sys
 
 
-if date.isoweekday(date.today()) != 4: #check for updates only on thursday
-	sys.exit()
+# if date.isoweekday(date.today()) != 4: #check for updates only on thursday
+# 	sys.exit()
 
 
 with open('naruto.txt','r') as f:
@@ -33,16 +33,16 @@ if a!=[]:
 	print string
 	url = string.split(': ')[1].split(',')[0]
 	url = url.replace('"','')
-	with open("temp.txt",'wb') as f:
-		f.write(url[1:][:-1])
+	
 
-
-	video = urllib2.urlopen(open("temp.txt").read()).read() #workaround till SO answer
+	url = url.strip('\'"')
+	video = urllib2.urlopen(url).read() #workaround till SO answer
 	filename = "naruto.mp4"
 	with open(filename,'wb') as f:
 		f.write(video)
 	with open('naruto.txt',w) as f:
 		f.write(video_to_download)
 else:
+	print "not released"
 	with open('error.txt','a') as f:
 		f.write("Naruto "+ str(video_to_download)+" not released yet. "+str(date.isoweekday(date.today())))
