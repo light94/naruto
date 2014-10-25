@@ -1,5 +1,11 @@
 import urllib2
 from bs4 import BeautifulSoup as bs
+from datetime import date
+import sys
+
+
+if date.isoweekday(date.today())) ! = 4: #check for updates only on thursday
+	sys.exit()
 
 
 with open('naruto.txt','r') as f:
@@ -39,4 +45,4 @@ if a!=[]:
 		f.write(video_to_download)
 else:
 	with open('error.txt','a') as f:
-		f.write("Naruto "+ str(video_to_download)+" not released yet.")
+		f.write("Naruto "+ str(video_to_download)+" not released yet. "+str(date.isoweekday(date.today())))
