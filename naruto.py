@@ -30,7 +30,6 @@ if a!=[]:
 	webpage2 = urllib2.urlopen('http://www1.narutospot.net/video/play/'+id)
 	soup = bs(webpage2)
 	string = str(soup.find_all('script')[2])
-	print string
 	url = string.split(': ')[1].split(',')[0]
 	url = url.replace('"','')
 	
