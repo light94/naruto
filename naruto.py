@@ -40,11 +40,11 @@ if a!=[]:
 	video = urllib2.urlopen(url).read()
 
 	print "Video Read" 
-	filename = "naruto.mp4"
+	filename = "naruto_"+str(video_to_download)+".mp4" 
 	with open(filename,'wb') as f:
 		f.write(video)
 	print "Video Saved naruto.mp4"
-	with open('naruto.txt',w) as f:
+	with open('naruto.txt','w') as f:
 		f.write(video_to_download)
 else:
 	print "Video not released"
