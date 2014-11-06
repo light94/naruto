@@ -1,8 +1,8 @@
 naruto
 ======
-Update:The script has been modified to deal wiht the new page format. It's working again!!
+Update:6/11/2014  9 pm The script has been modified to deal wiht the new page format. It's working again!!
 
-Update: This script is deprecated as of 6/11/2014
+Update: 6/11/2014 5 pm This script is deprecated.
 
 
 This script can be used for downloading naruto shippuden episodes from narutospot.net .
