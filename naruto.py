@@ -29,9 +29,11 @@ if a!=[]:
 	id = a[0]['data-video-id']
 	webpage2 = urllib2.urlopen('http://www1.narutospot.net/video/play/'+id)
 	soup = bs(webpage2)
-	string = str(soup.find_all('script')[2])
-	url = string.split(': ')[1].split(',')[0]
-	url = url.replace('"','')
+	string = str(soup.find_all('script')[3].text)
+	
+	
+	url = str(string.split('"')[1])
+
 	
 
 	url = url.strip('\'"')
@@ -39,7 +41,7 @@ if a!=[]:
 	video = urllib2.urlopen(url).read()
 
 	print "Video Read" 
-	filename = "naruto_"+str(video_to_download)+".mp4" 
+	filename = "naruto-"+str(video_to_download)+".mp4" 
 	with open(filename,'wb') as f:
 		f.write(video)
 	print "Video Saved naruto.mp4"
