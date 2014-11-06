@@ -46,7 +46,7 @@ if a!=[]:
 		f.write(video)
 	print "Video Saved naruto.mp4"
 	with open('naruto.txt','w') as f:
-		f.write(video_to_download)
+		f.write(str(video_to_download))
 else:
 	print "Video not released"
 	with open('error.txt','a') as f:
