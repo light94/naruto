@@ -1,5 +1,7 @@
 naruto
 ======
+Update 16/11/2014 Deprecated :/
+
 Update:6/11/2014  9 pm The script has been modified to deal wiht the new page format. It's working again!!
 
 Update: 6/11/2014 5 pm This script is deprecated.
